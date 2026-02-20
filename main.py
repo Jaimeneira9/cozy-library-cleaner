@@ -24,6 +24,7 @@ def buscar_en_google(q: str):
             # Verificamos que tenga título y autores antes de añadirlo
             if "title" in info and "authors" in info:
                 libro = {
+                    "googleId": item.get("id"),
                     "titulo": info.get("title"),
                     "autores": info.get("authors"),
                     "anio": info.get("publishedDate", "0000")[:4],
